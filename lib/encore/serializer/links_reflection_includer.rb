@@ -21,7 +21,8 @@ module Encore
 
           {
             href: "/#{reflection_type}?#{object.class.name.underscore}_id=#{object.id}",
-            type: reflection_type
+            type: reflection_type,
+            id: object.id
           }
         end
 
@@ -31,7 +32,8 @@ module Encore
 
           {
             href: "/#{root_type}/#{object.id}/#{reflection_type}",
-            type: reflection_type.pluralize
+            type: reflection_type.pluralize,
+            id: object.id
           }
         end
 
